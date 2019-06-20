@@ -1,5 +1,12 @@
 import sqlite3
 
+def alchemy_add_name(name,db):
+        db.session.add(name)
+        db.session.commit()
+    return f"{name} added"
+
+def alchemy_get_names(User): 
+    return User.query.all()
 
 
 def initdb():
